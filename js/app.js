@@ -22,8 +22,8 @@
 
     setTimeout(() => {
         for (let item of sarees) {
-            let _html = `<div class="col">
-                <div class="card" style="width: 18rem;">
+            let _html = `<div class="col col-xs-12 col-sm-12 col-md-4 col-lg-3 itemlayout gridview">
+                <div class="card text-center" style="width: 18rem;">
                 <img src="${item.iurl}" class="card-img-top" alt="${item.name}">
                 <div class="card-body">
                     <h5 class="card-title">${item.name}</h5>
@@ -32,8 +32,7 @@
                 </div>
                 </div>
             </div>`;
-            console.log(item);
-            document.querySelector(".row").insertAdjacentHTML('beforeend', _html);
+            document.querySelector(".items").insertAdjacentHTML('beforeend', _html);
         }
     });
 
