@@ -22,7 +22,7 @@
 
     setTimeout(() => {
         for (let item of sarees) {
-            let _html = `<div class="col col-3">
+            let _html = `<div class="col">
                 <div class="card" style="width: 18rem;">
                 <img src="${item.iurl}" class="card-img-top" alt="${item.name}">
                 <div class="card-body">
