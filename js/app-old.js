@@ -22,27 +22,22 @@
 
     setTimeout(() => {
         for (let item of sarees) {
-            let _html = `            
-            <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="${item.iurl}" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <div class="card-body text-center">
+            let _html = `<div class="col col-xs-12 col-sm-12 col-md-4 col-lg-3 itemlayout gridview">
+                <div class="card text-center" style="width: 18rem;">
+                <img src="${item.iurl}" class="card-img-top img-fluid" alt="${item.name}">
+                <div class="gallery-links d-flex align-items-center justify-content-center">
+                <a href="${item.iurl}" title="${item.name}" class="glightbox preview-link">
+                 <i class="bi bi-arrows-angle-expand"></i>
+                </a>
+                </div>
+                <div class="card-body">
                     <h5 class="card-title">${item.name}</h5>
                     <p class="card-text">${item.desc}</p>
                     <p class="card-text" data-price="${item.price}">&#8360;&nbsp;${item.price}</p>
-                    <p>
-                    <a href="${item.iurl}" title="${item.name}" class="glightbox preview-link">
-                     <i class="bi bi-arrows-angle-expand"></i>
-                    </a>
-                    </p>
                 </div>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-            
-            `;
-            document.querySelector("#gallery .row").insertAdjacentHTML('beforeend', _html);
+                </div>
+            </div>`;
+            document.querySelector(".items").insertAdjacentHTML('beforeend', _html);
         }
     });
 
