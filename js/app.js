@@ -24,9 +24,9 @@
         for (let item of sarees) {
             let _html = `            
             <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
+            <div class="gallery-it em h-100">
               <img src="${item.iurl}" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
+              <div class="gallery-lin ks d-flex align-items-center justify-content-center">
                 <div class="card-body text-center">
                     <h5 class="card-title">${item.name}</h5>
                     <p class="card-text">${item.desc}</p>
